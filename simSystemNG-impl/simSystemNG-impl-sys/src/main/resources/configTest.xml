@@ -1,0 +1,3373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configurationType>
+	<arduinos>
+		<arduino name="1">
+			<mainShiftRegister name="SR1">
+				<serPin>14</serPin>
+				<clkPin>15</clkPin>
+				<srclkPin>16</srclkPin>
+				<auxShiftRegisters>
+					<auxShiftRegister name="ASR1"/>
+					<auxShiftRegister name="ASR2"/>
+					<auxShiftRegister name="ASR3"/>
+					<auxShiftRegister name="ASR4"/>
+					<auxShiftRegister name="ASR5"/>
+					<auxShiftRegister name="ASR6"/>
+				</auxShiftRegisters>
+			</mainShiftRegister>
+			<panels>
+				<panel name="1">
+					<indicators>
+						<indicator name="Hyd standby low quantity">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR1</auxShiftRegisterName>
+							<auxShiftRegisterPin>0</auxShiftRegisterPin>
+							<shiftRegisterValue>0</shiftRegisterValue>
+							<transistorNumber>1</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>2</arduinoMessage>
+									<proSimMessage>I_HYD_STANDBY_LOW_QUANTITY=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>3</arduinoMessage>
+									<proSimMessage>I_HYD_STANDBY_LOW_QUANTITY=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Hyd standby low pressure">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR1</auxShiftRegisterName>
+							<auxShiftRegisterPin>1</auxShiftRegisterPin>
+							<shiftRegisterValue>1</shiftRegisterValue>
+							<transistorNumber>2</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>4</arduinoMessage>
+									<proSimMessage>I_HYD_STANDBY_LOW_PRESSURE=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>5</arduinoMessage>
+									<proSimMessage>I_HYD_STANDBY_LOW_PRESSURE=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="FLT Control low pressure A">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR1</auxShiftRegisterName>
+							<auxShiftRegisterPin>2</auxShiftRegisterPin>
+							<shiftRegisterValue>2</shiftRegisterValue>
+							<transistorNumber>3</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>8</arduinoMessage>
+									<proSimMessage>I_FLT_CONTROL_LOW_PRESSURE_A=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>9</arduinoMessage>
+									<proSimMessage>I_FLT_CONTROL_LOW_PRESSURE_A=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="FLT Control low pressure B">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR1</auxShiftRegisterName>
+							<auxShiftRegisterPin>3</auxShiftRegisterPin>
+							<shiftRegisterValue>5</shiftRegisterValue>
+							<transistorNumber>4</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>10</arduinoMessage>
+									<proSimMessage>I_FLT_CONTROL_LOW_PRESSURE_B=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>11</arduinoMessage>
+									<proSimMessage>I_FLT_CONTROL_LOW_PRESSURE_B=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Feel Diff Press">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR1</auxShiftRegisterName>
+							<auxShiftRegisterPin>5</auxShiftRegisterPin>
+							<shiftRegisterValue>3</shiftRegisterValue>
+							<transistorNumber>5</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>12</arduinoMessage>
+									<proSimMessage>I_FEEL_DIFF_PRESS=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>13</arduinoMessage>
+									<proSimMessage>I_FEEL_DIFF_PRESS=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Speed Trim Fail">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR1</auxShiftRegisterName>
+							<auxShiftRegisterPin>6</auxShiftRegisterPin>
+							<shiftRegisterValue>6</shiftRegisterValue>
+							<transistorNumber>6</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>14</arduinoMessage>
+									<proSimMessage>I_SPEED_TRIM_FAIL=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>15</arduinoMessage>
+									<proSimMessage>I_SPEED_TRIM_FAIL=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Mach Trim Fail">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR1</auxShiftRegisterName>
+							<auxShiftRegisterPin>7</auxShiftRegisterPin>
+							<shiftRegisterValue>7</shiftRegisterValue>
+							<transistorNumber>7</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>16</arduinoMessage>
+									<proSimMessage>I_MACH_TRIM_FAIL=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>17</arduinoMessage>
+									<proSimMessage>I_MACH_TRIM_FAIL=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Auto slat Fail">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR2</auxShiftRegisterName>
+							<auxShiftRegisterPin>0</auxShiftRegisterPin>
+							<shiftRegisterValue>8</shiftRegisterValue>
+							<transistorNumber>8</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>18</arduinoMessage>
+									<proSimMessage>I_AUTO_SLAT_FAIL=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>19</arduinoMessage>
+									<proSimMessage>I_AUTO_SLAT_FAIL=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Yaw damper">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR2</auxShiftRegisterName>
+							<auxShiftRegisterPin>1</auxShiftRegisterPin>
+							<shiftRegisterValue>9</shiftRegisterValue>
+							<transistorNumber>9</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>20</arduinoMessage>
+									<proSimMessage>I_YAW_DAMPER=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>21</arduinoMessage>
+									<proSimMessage>I_YAW_DAMPER=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+					</indicators>
+					<switches>
+						<switch name="Flt Ctrl A">
+							<switchStates>
+								<switchState name="Stby Rud">
+									<arduinoMessage>22</arduinoMessage>
+									<proSimMessage>S_FLT_CTRL_A_STBY_RUD</proSimMessage>
+									<inputPin>17</inputPin>
+								</switchState>
+								<switchState name="A On">
+									<arduinoMessage>23</arduinoMessage>
+									<proSimMessage>S_FLT_CTRL_A_A_ON</proSimMessage>
+									<inputPin>18</inputPin>
+								</switchState>
+								<switchState name="Off">
+									<arduinoMessage>24</arduinoMessage>
+									<proSimMessage>S_FLT_CTRL_A_OFF</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Flt Ctrl B">
+							<switchStates>
+								<switchState name="Stby Rud">
+									<arduinoMessage>25</arduinoMessage>
+									<proSimMessage>S_FLT_CTRL_B_STBY_RUD</proSimMessage>
+									<inputPin>19</inputPin>
+								</switchState>
+								<switchState name="B On">
+									<arduinoMessage>26</arduinoMessage>
+									<proSimMessage>S_FLT_CTRL_B_B_ON</proSimMessage>
+									<inputPin>20</inputPin>
+								</switchState>
+								<switchState name="Off">
+									<arduinoMessage>27</arduinoMessage>
+									<proSimMessage>S_FLT_CTRL_B_OFF</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Spoiler A">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>28</arduinoMessage>
+									<proSimMessage>S_SPOILER_A_OFF</proSimMessage>
+									<inputPin>21</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>29</arduinoMessage>
+									<proSimMessage>S_SPOILER_A_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Spoiler B">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>30</arduinoMessage>
+									<proSimMessage>S_SPOILER_B_OFF</proSimMessage>
+									<inputPin>22</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>31</arduinoMessage>
+									<proSimMessage>S_SPOILER_B_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Yaw damper">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>32</arduinoMessage>
+									<proSimMessage>S_YAW_DAMPER_OFF</proSimMessage>
+									<inputPin>23</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>33</arduinoMessage>
+									<proSimMessage>S_YAW_DAMPER_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Alternate flaps">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>34</arduinoMessage>
+									<proSimMessage>S_ALTERNATE_FLAPS_OFF</proSimMessage>
+									<inputPin>24</inputPin>
+								</switchState>
+								<switchState name="Arm">
+									<arduinoMessage>35</arduinoMessage>
+									<proSimMessage>S_ALTERNATE_FLAPS_ARM</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Alternate flaps ctrl">
+							<switchStates>
+								<switchState name="Up">
+									<arduinoMessage>36</arduinoMessage>
+									<proSimMessage>S_ALTERNATE_FLAPS_CTRL_UP</proSimMessage>
+									<inputPin>25</inputPin>
+								</switchState>
+								<switchState name="Down">
+									<arduinoMessage>37</arduinoMessage>
+									<proSimMessage>S_ALTERNATE_FLAPS_CTRL_DOWN</proSimMessage>
+									<inputPin>26</inputPin>
+								</switchState>
+								<switchState name="Off">
+									<arduinoMessage>38</arduinoMessage>
+									<proSimMessage>S_ALTERNATE_FLAPS_CTRL_OFF</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+				</panel>
+				<panel name="2">
+					<switches>
+						<switch name="VHF NAV">
+							<switchStates>
+								<switchState name="Both on 1">
+									<arduinoMessage>39</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>27</inputPin>
+								</switchState>
+								<switchState name="Both on 2">
+									<arduinoMessage>40</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>28</inputPin>
+								</switchState>
+								<switchState name="Normal">
+									<arduinoMessage>41</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="IRS">
+							<switchStates>
+								<switchState name="Both on L">
+									<arduinoMessage>42</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>29</inputPin>
+								</switchState>
+								<switchState name="Both on R">
+									<arduinoMessage>43</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>30</inputPin>
+								</switchState>
+								<switchState name="Normal">
+									<arduinoMessage>44</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="FMC">
+							<switchStates>
+								<switchState name="Both on L">
+									<arduinoMessage>45</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>31</inputPin>
+								</switchState>
+								<switchState name="Both on R">
+									<arduinoMessage>46</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>32</inputPin>
+								</switchState>
+								<switchState name="Normal">
+									<arduinoMessage>47</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Display Control Panel">
+							<switchStates>
+								<switchState name="Both on 1">
+									<arduinoMessage>48</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>33</inputPin>
+								</switchState>
+								<switchState name="Both on 2">
+									<arduinoMessage>49</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>34</inputPin>
+								</switchState>
+								<switchState name="Normal">
+									<arduinoMessage>50</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+					<rotaryEncoders>
+						<rotary name="Display source">
+							<inputPin>A0</inputPin>
+							<rotaryStates>
+								<rotaryState name="Auto">
+									<arduinoMessage>51</arduinoMessage>
+									<proSimMessage/>
+									<rotaryPin/>
+									<minThreshold>900</minThreshold>
+									<maxThreshold>1024</maxThreshold>
+								</rotaryState>
+								<rotaryState name="All on 1">
+									<arduinoMessage>52</arduinoMessage>
+									<proSimMessage/>
+									<rotaryPin/>
+									<minThreshold>800</minThreshold>
+									<maxThreshold>900</maxThreshold>
+								</rotaryState>
+								<rotaryState name="All on 2">
+									<arduinoMessage>53</arduinoMessage>
+									<proSimMessage/>
+									<rotaryPin/>
+									<minThreshold>650</minThreshold>
+									<maxThreshold>800</maxThreshold>
+								</rotaryState>
+							</rotaryStates>
+						</rotary>
+					</rotaryEncoders>
+				</panel>
+				<panel name="3">
+					<indicators>
+						<indicator name="ENG Valve Closed L">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR2</auxShiftRegisterName>
+							<auxShiftRegisterPin>2</auxShiftRegisterPin>
+							<shiftRegisterValue>10</shiftRegisterValue>
+							<transistorNumber>10</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>54</arduinoMessage>
+									<proSimMessage>I_ENG_VALVE_CLOSED_L=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>55</arduinoMessage>
+									<proSimMessage>I_ENG_VALVE_CLOSED_L=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="SPAR Valve Closed L">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR2</auxShiftRegisterName>
+							<auxShiftRegisterPin>3</auxShiftRegisterPin>
+							<shiftRegisterValue>11</shiftRegisterValue>
+							<transistorNumber>11</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>56</arduinoMessage>
+									<proSimMessage>I_SPAR_VALVE_CLOSED_L=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>57</arduinoMessage>
+									<proSimMessage>I_SPAR_VALVE_CLOSED_L=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="ENG Valve Closed R">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR2</auxShiftRegisterName>
+							<auxShiftRegisterPin>4</auxShiftRegisterPin>
+							<shiftRegisterValue>12</shiftRegisterValue>
+							<transistorNumber>12</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>58</arduinoMessage>
+									<proSimMessage>I_ENG_VALVE_CLOSED_R=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>59</arduinoMessage>
+									<proSimMessage>I_ENG_VALVE_CLOSED_R=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="SPAR Valve Closed R">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR2</auxShiftRegisterName>
+							<auxShiftRegisterPin>5</auxShiftRegisterPin>
+							<shiftRegisterValue>13</shiftRegisterValue>
+							<transistorNumber>13</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>60</arduinoMessage>
+									<proSimMessage>I_SPAR_VALVE_CLOSED_R=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>61</arduinoMessage>
+									<proSimMessage>I_SPAR_VALVE_CLOSED_R=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Filter Bypass L">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR2</auxShiftRegisterName>
+							<auxShiftRegisterPin>6</auxShiftRegisterPin>
+							<shiftRegisterValue>14</shiftRegisterValue>
+							<transistorNumber>14</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>62</arduinoMessage>
+									<proSimMessage>I_FILTER_BYPASS_L=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>63</arduinoMessage>
+									<proSimMessage>I_FILTER_BYPASS_L=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Crossfeed indicator">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR2</auxShiftRegisterName>
+							<auxShiftRegisterPin>7</auxShiftRegisterPin>
+							<shiftRegisterValue>15</shiftRegisterValue>
+							<transistorNumber>15</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>64</arduinoMessage>
+									<proSimMessage>I_CROSSFEED_INDICATOR=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>65</arduinoMessage>
+									<proSimMessage>I_CROSSFEED_INDICATOR=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Filter Bypass R">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR3</auxShiftRegisterName>
+							<auxShiftRegisterPin>0</auxShiftRegisterPin>
+							<shiftRegisterValue>16</shiftRegisterValue>
+							<transistorNumber>16</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>66</arduinoMessage>
+									<proSimMessage>I_FILTER_BYPASS_R=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>67</arduinoMessage>
+									<proSimMessage>I_FILTER_BYPASS_R=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Fuel Center Left LP">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR3</auxShiftRegisterName>
+							<auxShiftRegisterPin>1</auxShiftRegisterPin>
+							<shiftRegisterValue>17</shiftRegisterValue>
+							<transistorNumber>17</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>68</arduinoMessage>
+									<proSimMessage>I_FUEL_CENTER_LEFT_LP=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>69</arduinoMessage>
+									<proSimMessage>I_FUEL_CENTER_LEFT_LP=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Fuel Center Right LP">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR3</auxShiftRegisterName>
+							<auxShiftRegisterPin>2</auxShiftRegisterPin>
+							<shiftRegisterValue>18</shiftRegisterValue>
+							<transistorNumber>18</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>70</arduinoMessage>
+									<proSimMessage>I_FUEL_CENTER_RIGHT_LP=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>71</arduinoMessage>
+									<proSimMessage>I_FUEL_CENTER_RIGHT_LP=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Fuel Left Aft LP">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR3</auxShiftRegisterName>
+							<auxShiftRegisterPin>3</auxShiftRegisterPin>
+							<shiftRegisterValue>19</shiftRegisterValue>
+							<transistorNumber>19</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>72</arduinoMessage>
+									<proSimMessage>I_FUEL_LEFT_AFT_LP=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>73</arduinoMessage>
+									<proSimMessage>I_FUEL_LEFT_AFT_LP=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Fuel Left Fwd LP">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR3</auxShiftRegisterName>
+							<auxShiftRegisterPin>4</auxShiftRegisterPin>
+							<shiftRegisterValue>20</shiftRegisterValue>
+							<transistorNumber>20</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>74</arduinoMessage>
+									<proSimMessage>I_FUEL_LEFT_FWD_LP=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>75</arduinoMessage>
+									<proSimMessage>I_FUEL_LEFT_FWD_LP=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Fuel Right Fwd LP">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR3</auxShiftRegisterName>
+							<auxShiftRegisterPin>5</auxShiftRegisterPin>
+							<shiftRegisterValue>21</shiftRegisterValue>
+							<transistorNumber>21</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>76</arduinoMessage>
+									<proSimMessage>I_FUEL_RIGHT_FWD_LP=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>77</arduinoMessage>
+									<proSimMessage>I_FUEL_RIGHT_FWD_LP=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Fuel Right Aft LP">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR3</auxShiftRegisterName>
+							<auxShiftRegisterPin>6</auxShiftRegisterPin>
+							<shiftRegisterValue>22</shiftRegisterValue>
+							<transistorNumber>22</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>78</arduinoMessage>
+									<proSimMessage>I_FUEL_RIGHT_AFT_LP=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>79</arduinoMessage>
+									<proSimMessage>I_FUEL_RIGHT_AFT_LP=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+					</indicators>
+					<switches>
+						<switch name="Crossfeed">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>80</arduinoMessage>
+									<proSimMessage>S_CROSSFEED_OFF</proSimMessage>
+									<inputPin>35</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>81</arduinoMessage>
+									<proSimMessage>S_CROSSFEED_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Fuel Center Left">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>82</arduinoMessage>
+									<proSimMessage>S_FUEL_CENTER_LEFT_OFF</proSimMessage>
+									<inputPin>36</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>83</arduinoMessage>
+									<proSimMessage>S_FUEL_CENTER_LEFT_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Fuel Center Right">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>84</arduinoMessage>
+									<proSimMessage>S_FUEL_CENTER_RIGHT_OFF</proSimMessage>
+									<inputPin>37</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>85</arduinoMessage>
+									<proSimMessage>S_FUEL_CENTER_RIGHT_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Fuel Left Aft">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>86</arduinoMessage>
+									<proSimMessage>S_FUEL_LEFT_AFT_OFF</proSimMessage>
+									<inputPin>38</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>87</arduinoMessage>
+									<proSimMessage>S_FUEL_LEFT_AFT_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Fuel Left Fwd">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>88</arduinoMessage>
+									<proSimMessage>S_FUEL_LEFT_FWD_OFF</proSimMessage>
+									<inputPin>39</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>89</arduinoMessage>
+									<proSimMessage>S_FUEL_LEFT_FWD_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Fuel Right Fwd">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>90</arduinoMessage>
+									<proSimMessage>S_FUEL_RIGHT_FWD_OFF</proSimMessage>
+									<inputPin>40</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>91</arduinoMessage>
+									<proSimMessage>S_FUEL_RIGHT_FWD_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Fuel Right Aft">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>92</arduinoMessage>
+									<proSimMessage>S_FUEL_RIGHT_AFT_OFF</proSimMessage>
+									<inputPin>41</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>93</arduinoMessage>
+									<proSimMessage>S_FUEL_RIGHT_AFT_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+				</panel>
+				<panel name="4">
+					<switches>
+						<switch name="Cabin Telephon">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>94</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>42</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>95</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+				</panel>
+				<panel name="5">
+					<indicators>
+						<indicator name="Bat discharge">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR3</auxShiftRegisterName>
+							<auxShiftRegisterPin>7</auxShiftRegisterPin>
+							<shiftRegisterValue>23</shiftRegisterValue>
+							<transistorNumber>23</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>96</arduinoMessage>
+									<proSimMessage>I_BAT_DISCHARGE=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>97</arduinoMessage>
+									<proSimMessage>I_BAT_DISCHARGE=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="TR UNIT">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR4</auxShiftRegisterName>
+							<auxShiftRegisterPin>0</auxShiftRegisterPin>
+							<shiftRegisterValue>24</shiftRegisterValue>
+							<transistorNumber>24</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>98</arduinoMessage>
+									<proSimMessage>I_TR_UNIT=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>99</arduinoMessage>
+									<proSimMessage>I_TR_UNIT=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="ELEC">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR4</auxShiftRegisterName>
+							<auxShiftRegisterPin>1</auxShiftRegisterPin>
+							<shiftRegisterValue>25</shiftRegisterValue>
+							<transistorNumber>25</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>100</arduinoMessage>
+									<proSimMessage>I_ELEC=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>101</arduinoMessage>
+									<proSimMessage>I_ELEC=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+					</indicators>
+					<switches>
+						<switch name="Elec maint">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>102</arduinoMessage>
+									<proSimMessage>S_ELEC_MAINT_OFF</proSimMessage>
+									<inputPin>43</inputPin>
+								</switchState>
+								<switchState name="Pushed">
+									<arduinoMessage>103</arduinoMessage>
+									<proSimMessage>S_ELEC_MAINT_PUSHED</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Galley">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>104</arduinoMessage>
+									<proSimMessage>S_GALLEY_OFF</proSimMessage>
+									<inputPin>44</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>105</arduinoMessage>
+									<proSimMessage>S_GALLEY_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Battery switch">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>106</arduinoMessage>
+									<proSimMessage>S_BATTERY_SWITCH_OFF</proSimMessage>
+									<inputPin>45</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>107</arduinoMessage>
+									<proSimMessage>S_BATTERY_SWITCH_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+					<rotaryEncoders>
+						<rotary name="Elec Pnl DC">
+							<inputPin>A1</inputPin>
+							<rotaryStates>
+								<rotaryState name="STBY PWR">
+									<arduinoMessage>108</arduinoMessage>
+									<proSimMessage>R_ELEC_PNL_DC_STBY_PWR</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>900</minThreshold>
+									<maxThreshold>1024</maxThreshold>
+								</rotaryState>
+								<rotaryState name="BAT BUS">
+									<arduinoMessage>109</arduinoMessage>
+									<proSimMessage>R_ELEC_PNL_DC_BAT_BUS</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>800</minThreshold>
+									<maxThreshold>900</maxThreshold>
+								</rotaryState>
+								<rotaryState name="BAT">
+									<arduinoMessage>110</arduinoMessage>
+									<proSimMessage>R_ELEC_PNL_DC_BAT</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>650</minThreshold>
+									<maxThreshold>800</maxThreshold>
+								</rotaryState>
+								<rotaryState name="TR1">
+									<arduinoMessage>111</arduinoMessage>
+									<proSimMessage>R_ELEC_PNL_DC_TR1</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>500</minThreshold>
+									<maxThreshold>650</maxThreshold>
+								</rotaryState>
+								<rotaryState name="TR2">
+									<arduinoMessage>112</arduinoMessage>
+									<proSimMessage>R_ELEC_PNL_DC_TR2</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>400</minThreshold>
+									<maxThreshold>500</maxThreshold>
+								</rotaryState>
+								<rotaryState name="TR3">
+									<arduinoMessage>113</arduinoMessage>
+									<proSimMessage>R_ELEC_PNL_DC_TR3</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>400</minThreshold>
+									<maxThreshold>500</maxThreshold>
+								</rotaryState>
+								<rotaryState name="TEST">
+									<arduinoMessage>114</arduinoMessage>
+									<proSimMessage>R_ELEC_PNL_DC_TEST</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>200</minThreshold>
+									<maxThreshold>400</maxThreshold>
+								</rotaryState>
+							</rotaryStates>
+						</rotary>
+						<rotary name="Elec Pnl AC">
+							<inputPin>A2</inputPin>
+							<rotaryStates>
+								<rotaryState name="STBY PWR">
+									<arduinoMessage>115</arduinoMessage>
+									<proSimMessage>R_ELEC_PNL_AC_STBY_PWR</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>900</minThreshold>
+									<maxThreshold>1024</maxThreshold>
+								</rotaryState>
+								<rotaryState name="GRD PWR">
+									<arduinoMessage>116</arduinoMessage>
+									<proSimMessage>R_ELEC_PNL_AC_GRD_PWR</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>800</minThreshold>
+									<maxThreshold>900</maxThreshold>
+								</rotaryState>
+								<rotaryState name="GEN1">
+									<arduinoMessage>117</arduinoMessage>
+									<proSimMessage>R_ELEC_PNL_AC_GEN1</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>650</minThreshold>
+									<maxThreshold>800</maxThreshold>
+								</rotaryState>
+								<rotaryState name="APU GEN">
+									<arduinoMessage>118</arduinoMessage>
+									<proSimMessage>R_ELEC_PNL_AC_APU_GEN</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>500</minThreshold>
+									<maxThreshold>650</maxThreshold>
+								</rotaryState>
+								<rotaryState name="GEN2">
+									<arduinoMessage>119</arduinoMessage>
+									<proSimMessage>R_ELEC_PNL_AC_GEN2</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>400</minThreshold>
+									<maxThreshold>500</maxThreshold>
+								</rotaryState>
+								<rotaryState name="INV">
+									<arduinoMessage>120</arduinoMessage>
+									<proSimMessage>R_ELEC_PNL_AC_INV</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>200</minThreshold>
+									<maxThreshold>400</maxThreshold>
+								</rotaryState>
+								<rotaryState name="TEST">
+									<arduinoMessage>121</arduinoMessage>
+									<proSimMessage>R_ELEC_PNL_AC_TEST</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>100</minThreshold>
+									<maxThreshold>200</maxThreshold>
+								</rotaryState>
+							</rotaryStates>
+						</rotary>
+					</rotaryEncoders>
+				</panel>
+				<panel name="6">
+					<indicators>
+						<indicator name="Drive 1">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR4</auxShiftRegisterName>
+							<auxShiftRegisterPin>2</auxShiftRegisterPin>
+							<shiftRegisterValue>26</shiftRegisterValue>
+							<transistorNumber>26</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>122</arduinoMessage>
+									<proSimMessage>I_DRIVE_1=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>123</arduinoMessage>
+									<proSimMessage>I_DRIVE_1=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Standby pwr off">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR4</auxShiftRegisterName>
+							<auxShiftRegisterPin>3</auxShiftRegisterPin>
+							<shiftRegisterValue>27</shiftRegisterValue>
+							<transistorNumber>27</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>124</arduinoMessage>
+									<proSimMessage>I_STANDBY_PWR_OFF=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>125</arduinoMessage>
+									<proSimMessage>I_STANDBY_PWR_OFF=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Drive 2">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR4</auxShiftRegisterName>
+							<auxShiftRegisterPin>4</auxShiftRegisterPin>
+							<shiftRegisterValue>28</shiftRegisterValue>
+							<transistorNumber>28</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>126</arduinoMessage>
+									<proSimMessage>I_DRIVE_2=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>127</arduinoMessage>
+									<proSimMessage>I_DRIVE_2=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+					</indicators>
+					<switches>
+						<switch name="Standby power switch">
+							<switchStates>
+								<switchState name="Bat">
+									<arduinoMessage>128</arduinoMessage>
+									<proSimMessage>S_STANDBY_POWER_SWITCH_BAT</proSimMessage>
+									<inputPin>46</inputPin>
+								</switchState>
+								<switchState name="Auto">
+									<arduinoMessage>129</arduinoMessage>
+									<proSimMessage>S_STANDBY_POWER_SWITCH_AUTO</proSimMessage>
+									<inputPin>47</inputPin>
+								</switchState>
+								<switchState name="Off">
+									<arduinoMessage>130</arduinoMessage>
+									<proSimMessage>S_STANDBY_POWER_SWITCH_OFF</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Disconnect 1">
+							<switchStates>
+								<switchState name="Normal">
+									<arduinoMessage>131</arduinoMessage>
+									<proSimMessage>S_DISCONNECT_1_NORMAL</proSimMessage>
+									<inputPin>48</inputPin>
+								</switchState>
+								<switchState name="Off">
+									<arduinoMessage>132</arduinoMessage>
+									<proSimMessage>S_DISCONNECT_1_OFF</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Disconnect 2">
+							<switchStates>
+								<switchState name="Normal">
+									<arduinoMessage>133</arduinoMessage>
+									<proSimMessage>S_DISCONNECT_2_NORMAL</proSimMessage>
+									<inputPin>49</inputPin>
+								</switchState>
+								<switchState name="Off">
+									<arduinoMessage>134</arduinoMessage>
+									<proSimMessage>S_DISCONNECT_2_OFF</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+				</panel>
+				<panel name="7">
+					<indicators>
+						<indicator name="Grd Pwr available">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR4</auxShiftRegisterName>
+							<auxShiftRegisterPin>5</auxShiftRegisterPin>
+							<shiftRegisterValue>29</shiftRegisterValue>
+							<transistorNumber>29</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>135</arduinoMessage>
+									<proSimMessage>I_GRD_PWR_AVAILABLE=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>136</arduinoMessage>
+									<proSimMessage>I_GRD_PWR_AVAILABLE=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Transfer bus OFF 1">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR4</auxShiftRegisterName>
+							<auxShiftRegisterPin>6</auxShiftRegisterPin>
+							<shiftRegisterValue>30</shiftRegisterValue>
+							<transistorNumber>30</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>137</arduinoMessage>
+									<proSimMessage>I_TRANSFER_BUS_OFF_1=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>138</arduinoMessage>
+									<proSimMessage>I_TRANSFER_BUS_OFF_1=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Transfer bus OFF 2">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR4</auxShiftRegisterName>
+							<auxShiftRegisterPin>7</auxShiftRegisterPin>
+							<shiftRegisterValue>31</shiftRegisterValue>
+							<transistorNumber>31</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>139</arduinoMessage>
+									<proSimMessage>I_TRANSFER_BUS_OFF_2=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>140</arduinoMessage>
+									<proSimMessage>I_TRANSFER_BUS_OFF_2=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Source OFF 1">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR5</auxShiftRegisterName>
+							<auxShiftRegisterPin>0</auxShiftRegisterPin>
+							<shiftRegisterValue>32</shiftRegisterValue>
+							<transistorNumber>32</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>141</arduinoMessage>
+									<proSimMessage>I_SOURCE_OFF_1=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>142</arduinoMessage>
+									<proSimMessage>I_SOURCE_OFF_1=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Source OFF 2">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR5</auxShiftRegisterName>
+							<auxShiftRegisterPin>1</auxShiftRegisterPin>
+							<shiftRegisterValue>33</shiftRegisterValue>
+							<transistorNumber>33</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>143</arduinoMessage>
+									<proSimMessage>I_SOURCE_OFF_2=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>144</arduinoMessage>
+									<proSimMessage>I_SOURCE_OFF_2=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="GEN BUS OFF 1">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR5</auxShiftRegisterName>
+							<auxShiftRegisterPin>2</auxShiftRegisterPin>
+							<shiftRegisterValue>34</shiftRegisterValue>
+							<transistorNumber>34</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>145</arduinoMessage>
+									<proSimMessage>I_GEN_BUS_OFF_1=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>146</arduinoMessage>
+									<proSimMessage>I_GEN_BUS_OFF_1=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="GEN BUS OFF 2">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR5</auxShiftRegisterName>
+							<auxShiftRegisterPin>3</auxShiftRegisterPin>
+							<shiftRegisterValue>35</shiftRegisterValue>
+							<transistorNumber>35</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>147</arduinoMessage>
+									<proSimMessage>I_GEN_BUS_OFF_2=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>148</arduinoMessage>
+									<proSimMessage>I_GEN_BUS_OFF_2=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="APU GEN OFF BUS">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR5</auxShiftRegisterName>
+							<auxShiftRegisterPin>4</auxShiftRegisterPin>
+							<shiftRegisterValue>36</shiftRegisterValue>
+							<transistorNumber>36</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>149</arduinoMessage>
+									<proSimMessage>I_APU_GEN_OFF_BUS=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>150</arduinoMessage>
+									<proSimMessage>I_APU_GEN_OFF_BUS=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="APU Maint">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR5</auxShiftRegisterName>
+							<auxShiftRegisterPin>5</auxShiftRegisterPin>
+							<shiftRegisterValue>37</shiftRegisterValue>
+							<transistorNumber>37</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>151</arduinoMessage>
+									<proSimMessage>I_APU_MAINT=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>152</arduinoMessage>
+									<proSimMessage>I_APU_MAINT=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="APU Low oil pressure">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR5</auxShiftRegisterName>
+							<auxShiftRegisterPin>6</auxShiftRegisterPin>
+							<shiftRegisterValue>38</shiftRegisterValue>
+							<transistorNumber>38</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>153</arduinoMessage>
+									<proSimMessage>I_APU_LOW_OIL_PRESSURE=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>154</arduinoMessage>
+									<proSimMessage>I_APU_LOW_OIL_PRESSURE=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="APU FAULT">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR5</auxShiftRegisterName>
+							<auxShiftRegisterPin>7</auxShiftRegisterPin>
+							<shiftRegisterValue>39</shiftRegisterValue>
+							<transistorNumber>39</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>155</arduinoMessage>
+									<proSimMessage>I_APU_FAULT=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>156</arduinoMessage>
+									<proSimMessage>I_APU_FAULT=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="APU Overspeed">
+							<mainShiftRegisterName>SR1</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR6</auxShiftRegisterName>
+							<auxShiftRegisterPin>0</auxShiftRegisterPin>
+							<shiftRegisterValue>40</shiftRegisterValue>
+							<transistorNumber>40</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>157</arduinoMessage>
+									<proSimMessage>I_APU_OVERSPEED=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>158</arduinoMessage>
+									<proSimMessage>I_APU_OVERSPEED=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+					</indicators>
+					<switches>
+						<switch name="Ground Power">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>159</arduinoMessage>
+									<proSimMessage>S_GROUND_POWER_OFF</proSimMessage>
+									<inputPin>50</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>160</arduinoMessage>
+									<proSimMessage>S_GROUND_POWER_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+								<switchState name="Center">
+									<arduinoMessage>161</arduinoMessage>
+									<proSimMessage>S_GROUND_POWER_CENTER</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Bus transfer switch">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>162</arduinoMessage>
+									<proSimMessage>S_BUS_TRANSFER_SWITCH_OFF</proSimMessage>
+									<inputPin>52</inputPin>
+								</switchState>
+								<switchState name="Auto">
+									<arduinoMessage>163</arduinoMessage>
+									<proSimMessage>S_BUS_TRANSFER_SWITCH_AUTO</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="GEN 1">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>164</arduinoMessage>
+									<proSimMessage>S_GEN_1_OFF</proSimMessage>
+									<inputPin>13</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>165</arduinoMessage>
+									<proSimMessage>S_GEN_1_ON</proSimMessage>
+									<inputPin>12</inputPin>
+								</switchState>
+								<switchState name="Center">
+									<arduinoMessage>166</arduinoMessage>
+									<proSimMessage>S_GEN_1_CENTER</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="APU GEN 1">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>167</arduinoMessage>
+									<proSimMessage>S_APU_GEN_1_OFF</proSimMessage>
+									<inputPin>11</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>168</arduinoMessage>
+									<proSimMessage>S_APU_GEN_1_ON</proSimMessage>
+									<inputPin>10</inputPin>
+								</switchState>
+								<switchState name="Center">
+									<arduinoMessage>169</arduinoMessage>
+									<proSimMessage>S_APU_GEN_1_CENTER</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="APU GEN 2">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>170</arduinoMessage>
+									<proSimMessage>S_APU_GEN_2_OFF</proSimMessage>
+									<inputPin>9</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>171</arduinoMessage>
+									<proSimMessage>S_APU_GEN_2_ON</proSimMessage>
+									<inputPin>8</inputPin>
+								</switchState>
+								<switchState name="Center">
+									<arduinoMessage>172</arduinoMessage>
+									<proSimMessage>S_APU_GEN_2_CENTER</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="GEN 2">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>173</arduinoMessage>
+									<proSimMessage>S_GEN_2_OFF</proSimMessage>
+									<inputPin>7</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>174</arduinoMessage>
+									<proSimMessage>S_GEN_2_ON</proSimMessage>
+									<inputPin>6</inputPin>
+								</switchState>
+								<switchState name="Center">
+									<arduinoMessage>175</arduinoMessage>
+									<proSimMessage>S_GEN_2_CENTER</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+				</panel>
+			</panels>
+		</arduino>
+		<arduino name="2">
+			<mainShiftRegister name="SR2">
+				<serPin>14</serPin>
+				<clkPin>15</clkPin>
+				<srclkPin>16</srclkPin>
+				<auxShiftRegisters>
+					<auxShiftRegister name="ASR7"/>
+				</auxShiftRegisters>
+			</mainShiftRegister>
+			<panels>
+				<panel name="8">
+					<indicators>
+						<indicator name="Lavatory smoke">
+							<mainShiftRegisterName>SR2</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR7</auxShiftRegisterName>
+							<auxShiftRegisterPin>0</auxShiftRegisterPin>
+							<shiftRegisterValue>0</shiftRegisterValue>
+							<transistorNumber>56</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>2</arduinoMessage>
+									<proSimMessage>I_LAVATORY_SMOKE=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>3</arduinoMessage>
+									<proSimMessage>I_LAVATORY_SMOKE=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Equip cooling exhaust Off">
+							<mainShiftRegisterName>SR2</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR7</auxShiftRegisterName>
+							<auxShiftRegisterPin>1</auxShiftRegisterPin>
+							<shiftRegisterValue>1</shiftRegisterValue>
+							<transistorNumber>57</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>4</arduinoMessage>
+									<proSimMessage>I_EQUIP_COOLING_EXHAUST_OFF=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>5</arduinoMessage>
+									<proSimMessage>I_EQUIP_COOLING_EXHAUST_OFF=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Equip cooling supply Off">
+							<mainShiftRegisterName>SR2</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR7</auxShiftRegisterName>
+							<auxShiftRegisterPin>2</auxShiftRegisterPin>
+							<shiftRegisterValue>2</shiftRegisterValue>
+							<transistorNumber>58</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>6</arduinoMessage>
+									<proSimMessage>I_EQUIP_COOLING_SUPPLY_OFF=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>7</arduinoMessage>
+									<proSimMessage>I_EQUIP_COOLING_SUPPLY_OFF=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Emerg Exit Lights not armed">
+							<mainShiftRegisterName>SR2</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR7</auxShiftRegisterName>
+							<auxShiftRegisterPin>3</auxShiftRegisterPin>
+							<shiftRegisterValue>3</shiftRegisterValue>
+							<transistorNumber>59</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>8</arduinoMessage>
+									<proSimMessage>I_EMERG_EXIT_LIGHTS_NOT_ARMED=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>9</arduinoMessage>
+									<proSimMessage>I_EMERG_EXIT_LIGHTS_NOT_ARMED=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Attend call">
+							<mainShiftRegisterName>SR2</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR7</auxShiftRegisterName>
+							<auxShiftRegisterPin>4</auxShiftRegisterPin>
+							<shiftRegisterValue>4</shiftRegisterValue>
+							<transistorNumber>60</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>10</arduinoMessage>
+									<proSimMessage>I_ATTEND_CALL=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>11</arduinoMessage>
+									<proSimMessage>I_ATTEND_CALL=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+					</indicators>
+					<switches>
+						<switch name="Equip cooling supply">
+							<switchStates>
+								<switchState name="Normal">
+									<arduinoMessage>12</arduinoMessage>
+									<proSimMessage>S_EQUIP_COOLING_SUPPLY_NORMAL</proSimMessage>
+									<inputPin>17</inputPin>
+								</switchState>
+								<switchState name="Alternate">
+									<arduinoMessage>13</arduinoMessage>
+									<proSimMessage>S_EQUIP_COOLING_SUPPLY_ALTERNATE</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Equip cooling exhaust">
+							<switchStates>
+								<switchState name="Normal">
+									<arduinoMessage>14</arduinoMessage>
+									<proSimMessage>S_EQUIP_COOLING_EXHAUST_NORMAL</proSimMessage>
+									<inputPin>18</inputPin>
+								</switchState>
+								<switchState name="Alternate">
+									<arduinoMessage>15</arduinoMessage>
+									<proSimMessage>S_EQUIP_COOLING_EXHAUST_ALTERNATE</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Emer Exit Lights">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>16</arduinoMessage>
+									<proSimMessage>S_EMER_EXIT_LIGHTS_OFF</proSimMessage>
+									<inputPin>19</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>17</arduinoMessage>
+									<proSimMessage>S_EMER_EXIT_LIGHTS_ON</proSimMessage>
+									<inputPin>20</inputPin>
+								</switchState>
+								<switchState name="Armed">
+									<arduinoMessage>18</arduinoMessage>
+									<proSimMessage>S_EMER_EXIT_LIGHTS_ARMED</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="No Smoking">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>19</arduinoMessage>
+									<proSimMessage>S_NO_SMOKING_OFF</proSimMessage>
+									<inputPin>21</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>20</arduinoMessage>
+									<proSimMessage>S_NO_SMOKING_ON</proSimMessage>
+									<inputPin>22</inputPin>
+								</switchState>
+								<switchState name="Auto">
+									<arduinoMessage>21</arduinoMessage>
+									<proSimMessage>S_NO_SMOKING_AUTO</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Seatbelt">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>22</arduinoMessage>
+									<proSimMessage>S_SEATBELT_OFF</proSimMessage>
+									<inputPin>23</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>23</arduinoMessage>
+									<proSimMessage>S_SEATBELT_ON</proSimMessage>
+									<inputPin>24</inputPin>
+								</switchState>
+								<switchState name="Auto">
+									<arduinoMessage>24</arduinoMessage>
+									<proSimMessage>S_SEATBELT_AUTO</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Attend">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>25</arduinoMessage>
+									<proSimMessage>S_ATTEND_OFF</proSimMessage>
+									<inputPin>25</inputPin>
+								</switchState>
+								<switchState name="Pushed">
+									<arduinoMessage>26</arduinoMessage>
+									<proSimMessage>S_ATTEND_PUSHED</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Ground call">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>27</arduinoMessage>
+									<proSimMessage>S_GROUND_CALL_OFF</proSimMessage>
+									<inputPin>26</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>28</arduinoMessage>
+									<proSimMessage>S_GROUND_CALL_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+				</panel>
+				<panel name="9">
+					<switches>
+						<switch name="Light Main Retract L">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>33</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>27</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>34</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Light Main Retract R">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>35</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>28</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>36</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Light Main Fixed L">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>37</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>29</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>38</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Light Main Fixed R">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>39</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>30</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>40</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Lights Runway turnoff L">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>41</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>31</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>42</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Lights Runway turnoff R">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>43</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>32</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>44</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Lights Taxi">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>45</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>33</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>46</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="APU switch">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>47</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>34</inputPin>
+								</switchState>
+								<switchState name="Start">
+									<arduinoMessage>48</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>35</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>49</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Ignition select">
+							<switchStates>
+								<switchState name="Left">
+									<arduinoMessage>50</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>36</inputPin>
+								</switchState>
+								<switchState name="Right">
+									<arduinoMessage>51</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>37</inputPin>
+								</switchState>
+								<switchState name="Both">
+									<arduinoMessage>52</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Lights Logo">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>53</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>38</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>54</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Lights Strobe">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>55</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>39</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>56</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Lights Position">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>57</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>40</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>58</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Lights Anti collision">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>59</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>41</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>60</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Lights Wing">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>61</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>42</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>62</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Lights Wheel well">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>63</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>43</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>64</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+					<rotaryEncoders>
+						<rotary name="Start 1">
+							<inputPin>A1</inputPin>
+							<rotaryStates>
+								<rotaryState name="Off">
+									<arduinoMessage>65</arduinoMessage>
+									<rotaryPin/>
+									<minThreshold>900</minThreshold>
+									<maxThreshold>1024</maxThreshold>
+								</rotaryState>
+								<rotaryState name="GRD">
+									<arduinoMessage>66</arduinoMessage>
+									<rotaryPin/>
+									<minThreshold>800</minThreshold>
+									<maxThreshold>900</maxThreshold>
+								</rotaryState>
+								<rotaryState name="CONT">
+									<arduinoMessage>67</arduinoMessage>
+									<rotaryPin/>
+									<minThreshold>650</minThreshold>
+									<maxThreshold>800</maxThreshold>
+								</rotaryState>
+								<rotaryState name="FLT">
+									<arduinoMessage>68</arduinoMessage>
+									<rotaryPin/>
+									<minThreshold>500</minThreshold>
+									<maxThreshold>650</maxThreshold>
+								</rotaryState>
+							</rotaryStates>
+						</rotary>
+						<rotary name="Start 2">
+							<inputPin>A2</inputPin>
+							<rotaryStates>
+								<rotaryState name="Off">
+									<arduinoMessage>69</arduinoMessage>
+									<rotaryPin/>
+									<minThreshold/>
+									<maxThreshold/>
+								</rotaryState>
+								<rotaryState name="GRD">
+									<arduinoMessage>70</arduinoMessage>
+									<rotaryPin/>
+									<minThreshold/>
+									<maxThreshold/>
+								</rotaryState>
+								<rotaryState name="CONT">
+									<arduinoMessage>71</arduinoMessage>
+									<rotaryPin/>
+									<minThreshold/>
+									<maxThreshold/>
+								</rotaryState>
+								<rotaryState name="FLT">
+									<arduinoMessage>72</arduinoMessage>
+									<rotaryPin/>
+									<minThreshold/>
+									<maxThreshold/>
+								</rotaryState>
+							</rotaryStates>
+						</rotary>
+					</rotaryEncoders>
+				</panel>
+			</panels>
+		</arduino>
+		<arduino name="3">
+			<mainShiftRegister name="SR3">
+				<serPin>14</serPin>
+				<clkPin>15</clkPin>
+				<srclkPin>16</srclkPin>
+				<auxShiftRegisters>
+					<auxShiftRegister name="ASR8"/>
+					<auxShiftRegister name="ASR9"/>
+					<auxShiftRegister name="ASR10"/>
+					<auxShiftRegister name="ASR11"/>
+					<auxShiftRegister name="ASR12"/>
+					<auxShiftRegister name="ASR13"/>
+					<auxShiftRegister name="ASR14"/>
+				</auxShiftRegisters>
+			</mainShiftRegister>
+			<panels>
+				<panel name="10">
+					<indicators>
+						<indicator name="Window heat Side L overheat">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR8</auxShiftRegisterName>
+							<auxShiftRegisterPin>0</auxShiftRegisterPin>
+							<shiftRegisterValue>0</shiftRegisterValue>
+							<transistorNumber>1</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>2</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_SIDE_L_OVERHEAT=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>3</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_SIDE_L_OVERHEAT=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Window heat FWD L overheat">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR8</auxShiftRegisterName>
+							<auxShiftRegisterPin>1</auxShiftRegisterPin>
+							<shiftRegisterValue>1</shiftRegisterValue>
+							<transistorNumber>2</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>4</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_FWD_L_OVERHEAT=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>5</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_FWD_L_OVERHEAT=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Window heat FWD R overheat">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR8</auxShiftRegisterName>
+							<auxShiftRegisterPin>2</auxShiftRegisterPin>
+							<shiftRegisterValue>2</shiftRegisterValue>
+							<transistorNumber>3</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>6</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_FWD_R_OVERHEAT=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>7</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_FWD_R_OVERHEAT=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Window heat Side R overheat">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR8</auxShiftRegisterName>
+							<auxShiftRegisterPin>3</auxShiftRegisterPin>
+							<shiftRegisterValue>3</shiftRegisterValue>
+							<transistorNumber>4</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>8</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_SIDE_R_OVERHEAT=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>9</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_SIDE_R_OVERHEAT=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Window heat Side L on">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR8</auxShiftRegisterName>
+							<auxShiftRegisterPin>4</auxShiftRegisterPin>
+							<shiftRegisterValue>4</shiftRegisterValue>
+							<transistorNumber>5</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>10</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_SIDE_L_ON=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>11</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_SIDE_L_ON=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Window heat FWD L on">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR8</auxShiftRegisterName>
+							<auxShiftRegisterPin>5</auxShiftRegisterPin>
+							<shiftRegisterValue>5</shiftRegisterValue>
+							<transistorNumber>6</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>12</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_FWD_L_ON=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>13</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_FWD_L_ON=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Window heat FWD R on">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR8</auxShiftRegisterName>
+							<auxShiftRegisterPin>6</auxShiftRegisterPin>
+							<shiftRegisterValue>6</shiftRegisterValue>
+							<transistorNumber>7</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>14</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_FWD_R_ON=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>15</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_FWD_R_ON=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Window heat Side R on">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR8</auxShiftRegisterName>
+							<auxShiftRegisterPin>7</auxShiftRegisterPin>
+							<shiftRegisterValue>7</shiftRegisterValue>
+							<transistorNumber>8</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>16</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_SIDE_R_ON=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>17</arduinoMessage>
+									<proSimMessage>I_WINDOW_HEAT_SIDE_R_ON=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Capt Pitot Heat">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR9</auxShiftRegisterName>
+							<auxShiftRegisterPin>0</auxShiftRegisterPin>
+							<shiftRegisterValue>8</shiftRegisterValue>
+							<transistorNumber>9</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>18</arduinoMessage>
+									<proSimMessage>I_CAPT_PITOT_HEAT=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>19</arduinoMessage>
+									<proSimMessage>I_CAPT_PITOT_HEAT=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Elev pitot Heat L">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR9</auxShiftRegisterName>
+							<auxShiftRegisterPin>1</auxShiftRegisterPin>
+							<shiftRegisterValue>9</shiftRegisterValue>
+							<transistorNumber>10</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>20</arduinoMessage>
+									<proSimMessage>I_ELEV_PITOT_HEAT_L=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>21</arduinoMessage>
+									<proSimMessage>I_ELEV_PITOT_HEAT_L=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Alpha Vane Heat L">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR9</auxShiftRegisterName>
+							<auxShiftRegisterPin>2</auxShiftRegisterPin>
+							<shiftRegisterValue>10</shiftRegisterValue>
+							<transistorNumber>11</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>22</arduinoMessage>
+									<proSimMessage>I_ALPHA_VANE_HEAT_L=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>23</arduinoMessage>
+									<proSimMessage>I_ALPHA_VANE_HEAT_L=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="tempProbe Heat">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR9</auxShiftRegisterName>
+							<auxShiftRegisterPin>3</auxShiftRegisterPin>
+							<shiftRegisterValue>11</shiftRegisterValue>
+							<transistorNumber>12</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>24</arduinoMessage>
+									<proSimMessage>I_TEMPPROBE_HEAT=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>25</arduinoMessage>
+									<proSimMessage>I_TEMPPROBE_HEAT=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Copilot Pitot Heat">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR9</auxShiftRegisterName>
+							<auxShiftRegisterPin>4</auxShiftRegisterPin>
+							<shiftRegisterValue>12</shiftRegisterValue>
+							<transistorNumber>13</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>26</arduinoMessage>
+									<proSimMessage>I_COPILOT_PITOT_HEAT=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>27</arduinoMessage>
+									<proSimMessage>I_COPILOT_PITOT_HEAT=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Elev pitot Heat R">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR9</auxShiftRegisterName>
+							<auxShiftRegisterPin>5</auxShiftRegisterPin>
+							<shiftRegisterValue>13</shiftRegisterValue>
+							<transistorNumber>14</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>28</arduinoMessage>
+									<proSimMessage>I_ELEV_PITOT_HEAT_R=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>29</arduinoMessage>
+									<proSimMessage>I_ELEV_PITOT_HEAT_R=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Alpha Vane Heat R">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR9</auxShiftRegisterName>
+							<auxShiftRegisterPin>6</auxShiftRegisterPin>
+							<shiftRegisterValue>14</shiftRegisterValue>
+							<transistorNumber>15</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>30</arduinoMessage>
+									<proSimMessage>I_ALPHA_VANE_HEAT_R=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>31</arduinoMessage>
+									<proSimMessage>I_ALPHA_VANE_HEAT_R=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="auxPitot Heat">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR9</auxShiftRegisterName>
+							<auxShiftRegisterPin>7</auxShiftRegisterPin>
+							<shiftRegisterValue>15</shiftRegisterValue>
+							<transistorNumber>16</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>32</arduinoMessage>
+									<proSimMessage>I_AUXPITOT_HEAT=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>33</arduinoMessage>
+									<proSimMessage>I_AUXPITOT_HEAT=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+					</indicators>
+					<switches>
+						<switch name="Window heat Side L">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>34</arduinoMessage>
+									<proSimMessage>S_WINDOW_HEAT_SIDE_L_OFF</proSimMessage>
+									<inputPin>17</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>35</arduinoMessage>
+									<proSimMessage>S_WINDOW_HEAT_SIDE_L_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Window heat FWD L">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>36</arduinoMessage>
+									<proSimMessage>S_WINDOW_HEAT_FWD_L_OFF</proSimMessage>
+									<inputPin>18</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>37</arduinoMessage>
+									<proSimMessage>S_WINDOW_HEAT_FWD_L_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Window heat FWD R">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>38</arduinoMessage>
+									<proSimMessage>S_WINDOW_HEAT_FWD_R_OFF</proSimMessage>
+									<inputPin>19</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>39</arduinoMessage>
+									<proSimMessage>S_WINDOW_HEAT_FWD_R_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Window heat Side R">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>40</arduinoMessage>
+									<proSimMessage>S_WINDOW_HEAT_SIDE_R_OFF</proSimMessage>
+									<inputPin>20</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>41</arduinoMessage>
+									<proSimMessage>S_WINDOW_HEAT_SIDE_R_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Window heat test">
+							<switchStates>
+								<switchState name="OVHT">
+									<arduinoMessage>42</arduinoMessage>
+									<proSimMessage>S_WINDOW_HEAT_TEST_OVHT</proSimMessage>
+									<inputPin>21</inputPin>
+								</switchState>
+								<switchState name="PWR TEST">
+									<arduinoMessage>43</arduinoMessage>
+									<proSimMessage>S_WINDOW_HEAT_TEST_PWR_TEST</proSimMessage>
+									<inputPin>22</inputPin>
+								</switchState>
+								<switchState name="Center">
+									<arduinoMessage>44</arduinoMessage>
+									<proSimMessage>S_WINDOW_HEAT_TEST_CENTER</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Probe heat A">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>45</arduinoMessage>
+									<proSimMessage>S_PROBE_HEAT_A_OFF</proSimMessage>
+									<inputPin>23</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>46</arduinoMessage>
+									<proSimMessage>S_PROBE_HEAT_A_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Probe heat B">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>47</arduinoMessage>
+									<proSimMessage>S_PROBE_HEAT_B_OFF</proSimMessage>
+									<inputPin>24</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>48</arduinoMessage>
+									<proSimMessage>S_PROBE_HEAT_B_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="TAT test">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>50</arduinoMessage>
+									<proSimMessage>S_TAT_TEST_OFF</proSimMessage>
+									<inputPin>25</inputPin>
+								</switchState>
+								<switchState name="Pushed">
+									<arduinoMessage>51</arduinoMessage>
+									<proSimMessage>S_TAT_TEST_PUSHED</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+				</panel>
+				<panel name="11">
+					<indicators>
+						<indicator name="Cowl Anti-Ice L">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR10</auxShiftRegisterName>
+							<auxShiftRegisterPin>0</auxShiftRegisterPin>
+							<shiftRegisterValue>16</shiftRegisterValue>
+							<transistorNumber>17</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>52</arduinoMessage>
+									<proSimMessage>I_COWL_ANTI-ICE_L=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>53</arduinoMessage>
+									<proSimMessage>I_COWL_ANTI-ICE_L=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Cowl Anti-Ice R">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR10</auxShiftRegisterName>
+							<auxShiftRegisterPin>1</auxShiftRegisterPin>
+							<shiftRegisterValue>17</shiftRegisterValue>
+							<transistorNumber>18</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>54</arduinoMessage>
+									<proSimMessage>I_COWL_ANTI-ICE_R=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>55</arduinoMessage>
+									<proSimMessage>I_COWL_ANTI-ICE_R=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="WAI L Valve Open">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR10</auxShiftRegisterName>
+							<auxShiftRegisterPin>2</auxShiftRegisterPin>
+							<shiftRegisterValue>18</shiftRegisterValue>
+							<transistorNumber>19</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>56</arduinoMessage>
+									<proSimMessage>I_WAI_L_VALVE_OPEN=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>57</arduinoMessage>
+									<proSimMessage>I_WAI_L_VALVE_OPEN=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="WAI R Valve Open">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR10</auxShiftRegisterName>
+							<auxShiftRegisterPin>3</auxShiftRegisterPin>
+							<shiftRegisterValue>19</shiftRegisterValue>
+							<transistorNumber>20</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>58</arduinoMessage>
+									<proSimMessage>I_WAI_R_VALVE_OPEN=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>59</arduinoMessage>
+									<proSimMessage>I_WAI_R_VALVE_OPEN=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Cowl valve open L">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR10</auxShiftRegisterName>
+							<auxShiftRegisterPin>4</auxShiftRegisterPin>
+							<shiftRegisterValue>20</shiftRegisterValue>
+							<transistorNumber>21</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>60</arduinoMessage>
+									<proSimMessage>I_COWL_VALVE_OPEN_L=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>61</arduinoMessage>
+									<proSimMessage>I_COWL_VALVE_OPEN_L=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Cowl valve open R">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR10</auxShiftRegisterName>
+							<auxShiftRegisterPin>5</auxShiftRegisterPin>
+							<shiftRegisterValue>21</shiftRegisterValue>
+							<transistorNumber>22</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>62</arduinoMessage>
+									<proSimMessage>I_COWL_VALVE_OPEN_R=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>63</arduinoMessage>
+									<proSimMessage>I_COWL_VALVE_OPEN_R=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+					</indicators>
+					<switches>
+						<switch name="Wing Anti-Ice">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>64</arduinoMessage>
+									<proSimMessage>S_WING_ANTI-ICE_OFF</proSimMessage>
+									<inputPin>26</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>65</arduinoMessage>
+									<proSimMessage>S_WING_ANTI-ICE_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Eng Anti-Ice 1">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>66</arduinoMessage>
+									<proSimMessage>S_ENG_ANTI-ICE_1_OFF</proSimMessage>
+									<inputPin>27</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>67</arduinoMessage>
+									<proSimMessage>S_ENG_ANTI-ICE_1_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Eng Anti-Ice 2">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>68</arduinoMessage>
+									<proSimMessage>S_ENG_ANTI-ICE_2_OFF</proSimMessage>
+									<inputPin>28</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>69</arduinoMessage>
+									<proSimMessage>S_ENG_ANTI-ICE_2_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+				</panel>
+				<panel name="12">
+					<indicators>
+						<indicator name="Hyd ELEC2 OVHT">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR10</auxShiftRegisterName>
+							<auxShiftRegisterPin>6</auxShiftRegisterPin>
+							<shiftRegisterValue>22</shiftRegisterValue>
+							<transistorNumber>23</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>70</arduinoMessage>
+									<proSimMessage>I_HYD_ELEC2_OVHT=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>71</arduinoMessage>
+									<proSimMessage>I_HYD_ELEC2_OVHT=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Hyd ELEC1 OVHT">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR10</auxShiftRegisterName>
+							<auxShiftRegisterPin>7</auxShiftRegisterPin>
+							<shiftRegisterValue>23</shiftRegisterValue>
+							<transistorNumber>24</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>72</arduinoMessage>
+									<proSimMessage>I_HYD_ELEC1_OVHT=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>73</arduinoMessage>
+									<proSimMessage>I_HYD_ELEC1_OVHT=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Hyd ENG1 LP">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR11</auxShiftRegisterName>
+							<auxShiftRegisterPin>0</auxShiftRegisterPin>
+							<shiftRegisterValue>24</shiftRegisterValue>
+							<transistorNumber>25</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>74</arduinoMessage>
+									<proSimMessage>I_HYD_ENG1_LP=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>75</arduinoMessage>
+									<proSimMessage>I_HYD_ENG1_LP=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Hyd ELEC2 LP">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR11</auxShiftRegisterName>
+							<auxShiftRegisterPin>1</auxShiftRegisterPin>
+							<shiftRegisterValue>25</shiftRegisterValue>
+							<transistorNumber>26</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>76</arduinoMessage>
+									<proSimMessage>I_HYD_ELEC2_LP=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>77</arduinoMessage>
+									<proSimMessage>I_HYD_ELEC2_LP=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Hyd ELEC1 LP">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR11</auxShiftRegisterName>
+							<auxShiftRegisterPin>2</auxShiftRegisterPin>
+							<shiftRegisterValue>26</shiftRegisterValue>
+							<transistorNumber>27</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>78</arduinoMessage>
+									<proSimMessage>I_HYD_ELEC1_LP=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>79</arduinoMessage>
+									<proSimMessage>I_HYD_ELEC1_LP=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Hyd ENG2 LP">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR11</auxShiftRegisterName>
+							<auxShiftRegisterPin>3</auxShiftRegisterPin>
+							<shiftRegisterValue>27</shiftRegisterValue>
+							<transistorNumber>28</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>80</arduinoMessage>
+									<proSimMessage>I_HYD_ENG2_LP=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>81</arduinoMessage>
+									<proSimMessage>I_HYD_ENG2_LP=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+					</indicators>
+					<switches>
+						<switch name="Hyd ENG1">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>82</arduinoMessage>
+									<proSimMessage>S_HYD_ENG1_OFF</proSimMessage>
+									<inputPin>29</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>83</arduinoMessage>
+									<proSimMessage>S_HYD_ENG1_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Hyd ELEC2">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>84</arduinoMessage>
+									<proSimMessage>S_HYD_ELEC2_OFF</proSimMessage>
+									<inputPin>30</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>85</arduinoMessage>
+									<proSimMessage>S_HYD_ELEC2_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Hyd ELEC1">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>86</arduinoMessage>
+									<proSimMessage>S_HYD_ELEC1_OFF</proSimMessage>
+									<inputPin>31</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>87</arduinoMessage>
+									<proSimMessage>S_HYD_ELEC1_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Hyd ENG2">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>88</arduinoMessage>
+									<proSimMessage>S_HYD_ENG2_OFF</proSimMessage>
+									<inputPin>32</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>89</arduinoMessage>
+									<proSimMessage>S_HYD_ENG2_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+				</panel>
+				<panel name="13">
+					<indicators>
+						<indicator name="Door Fwd entry">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR11</auxShiftRegisterName>
+							<auxShiftRegisterPin>4</auxShiftRegisterPin>
+							<shiftRegisterValue>28</shiftRegisterValue>
+							<transistorNumber>29</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>90</arduinoMessage>
+									<proSimMessage>I_DOOR_FWD_ENTRY=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>91</arduinoMessage>
+									<proSimMessage>I_DOOR_FWD_ENTRY=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Door Fwd Service">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR11</auxShiftRegisterName>
+							<auxShiftRegisterPin>5</auxShiftRegisterPin>
+							<shiftRegisterValue>29</shiftRegisterValue>
+							<transistorNumber>30</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>92</arduinoMessage>
+									<proSimMessage>I_DOOR_FWD_SERVICE=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>93</arduinoMessage>
+									<proSimMessage>I_DOOR_FWD_SERVICE=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Door Left Fwd Overwing">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR11</auxShiftRegisterName>
+							<auxShiftRegisterPin>6</auxShiftRegisterPin>
+							<shiftRegisterValue>30</shiftRegisterValue>
+							<transistorNumber>31</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>94</arduinoMessage>
+									<proSimMessage>I_DOOR_LEFT_FWD_OVERWING=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>95</arduinoMessage>
+									<proSimMessage>I_DOOR_LEFT_FWD_OVERWING=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Door Right Fwd Overwing">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR11</auxShiftRegisterName>
+							<auxShiftRegisterPin>7</auxShiftRegisterPin>
+							<shiftRegisterValue>31</shiftRegisterValue>
+							<transistorNumber>32</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>96</arduinoMessage>
+									<proSimMessage>I_DOOR_RIGHT_FWD_OVERWING=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>97</arduinoMessage>
+									<proSimMessage>I_DOOR_RIGHT_FWD_OVERWING=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Door Fwd Cargo">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR12</auxShiftRegisterName>
+							<auxShiftRegisterPin>0</auxShiftRegisterPin>
+							<shiftRegisterValue>32</shiftRegisterValue>
+							<transistorNumber>33</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>98</arduinoMessage>
+									<proSimMessage>I_DOOR_FWD_CARGO=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>99</arduinoMessage>
+									<proSimMessage>I_DOOR_FWD_CARGO=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Door Equip">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR12</auxShiftRegisterName>
+							<auxShiftRegisterPin>1</auxShiftRegisterPin>
+							<shiftRegisterValue>33</shiftRegisterValue>
+							<transistorNumber>34</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>100</arduinoMessage>
+									<proSimMessage>I_DOOR_EQUIP=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>101</arduinoMessage>
+									<proSimMessage>I_DOOR_EQUIP=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Door Left Aft Overwing">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR12</auxShiftRegisterName>
+							<auxShiftRegisterPin>2</auxShiftRegisterPin>
+							<shiftRegisterValue>34</shiftRegisterValue>
+							<transistorNumber>35</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>102</arduinoMessage>
+									<proSimMessage>I_DOOR_LEFT_AFT_OVERWING=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>103</arduinoMessage>
+									<proSimMessage>I_DOOR_LEFT_AFT_OVERWING=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Door Right Aft Overwing">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR12</auxShiftRegisterName>
+							<auxShiftRegisterPin>3</auxShiftRegisterPin>
+							<shiftRegisterValue>35</shiftRegisterValue>
+							<transistorNumber>36</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>104</arduinoMessage>
+									<proSimMessage>I_DOOR_RIGHT_AFT_OVERWING=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>105</arduinoMessage>
+									<proSimMessage>I_DOOR_RIGHT_AFT_OVERWING=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Door Aft Cargo">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR12</auxShiftRegisterName>
+							<auxShiftRegisterPin>4</auxShiftRegisterPin>
+							<shiftRegisterValue>36</shiftRegisterValue>
+							<transistorNumber>37</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>106</arduinoMessage>
+									<proSimMessage>I_DOOR_AFT_CARGO=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>107</arduinoMessage>
+									<proSimMessage>I_DOOR_AFT_CARGO=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Door Aft Entry">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR12</auxShiftRegisterName>
+							<auxShiftRegisterPin>5</auxShiftRegisterPin>
+							<shiftRegisterValue>37</shiftRegisterValue>
+							<transistorNumber>38</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>108</arduinoMessage>
+									<proSimMessage>I_DOOR_AFT_ENTRY=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>109</arduinoMessage>
+									<proSimMessage>I_DOOR_AFT_ENTRY=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Door Aft Service">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR12</auxShiftRegisterName>
+							<auxShiftRegisterPin>6</auxShiftRegisterPin>
+							<shiftRegisterValue>38</shiftRegisterValue>
+							<transistorNumber>39</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>110</arduinoMessage>
+									<proSimMessage>I_DOOR_AFT_SERVICE=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>111</arduinoMessage>
+									<proSimMessage>I_DOOR_AFT_SERVICE=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+					</indicators>
+				</panel>
+				<panel name="14">
+					<switches>
+						<switch name="Alt horn cutout">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>112</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>33</inputPin>
+								</switchState>
+								<switchState name="Pushed">
+									<arduinoMessage>113</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+				</panel>
+				<panel name="15">
+					<indicators>
+						<indicator name="Zone temp AFT CAB">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR12</auxShiftRegisterName>
+							<auxShiftRegisterPin>7</auxShiftRegisterPin>
+							<shiftRegisterValue>39</shiftRegisterValue>
+							<transistorNumber>40</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>114</arduinoMessage>
+									<proSimMessage>I_ZONE_TEMP_AFT_CAB=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>115</arduinoMessage>
+									<proSimMessage>I_ZONE_TEMP_AFT_CAB=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Zone temp CONT CAB">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR13</auxShiftRegisterName>
+							<auxShiftRegisterPin>0</auxShiftRegisterPin>
+							<shiftRegisterValue>40</shiftRegisterValue>
+							<transistorNumber>41</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>116</arduinoMessage>
+									<proSimMessage>I_ZONE_TEMP_CONT_CAB=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>117</arduinoMessage>
+									<proSimMessage>I_ZONE_TEMP_CONT_CAB=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Zone temp FWD CAB">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR13</auxShiftRegisterName>
+							<auxShiftRegisterPin>1</auxShiftRegisterPin>
+							<shiftRegisterValue>41</shiftRegisterValue>
+							<transistorNumber>42</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>118</arduinoMessage>
+									<proSimMessage>I_ZONE_TEMP_FWD_CAB=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>119</arduinoMessage>
+									<proSimMessage>I_ZONE_TEMP_FWD_CAB=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+					</indicators>
+					<switches>
+						<switch name="Trim air">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>120</arduinoMessage>
+									<proSimMessage>S_TRIM_AIR_OFF</proSimMessage>
+									<inputPin>34</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>121</arduinoMessage>
+									<proSimMessage>S_TRIM_AIR_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+					<rotaryEncoders>
+						<rotary name="Air Temp Selector">
+							<inputPin>A0</inputPin>
+							<rotaryStates>
+								<rotaryState name="CONT CAB">
+									<arduinoMessage>122</arduinoMessage>
+									<proSimMessage>R_AIR_TEMP_SELECTOR_CONT_CAB</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>900</minThreshold>
+									<maxThreshold>1024</maxThreshold>
+								</rotaryState>
+								<rotaryState name="DUCT FWD">
+									<arduinoMessage>123</arduinoMessage>
+									<proSimMessage>R_AIR_TEMP_SELECTOR_DUCT_FWD</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>800</minThreshold>
+									<maxThreshold>900</maxThreshold>
+								</rotaryState>
+								<rotaryState name="DUCT AFT">
+									<arduinoMessage>124</arduinoMessage>
+									<proSimMessage>R_AIR_TEMP_SELECTOR_DUCT_AFT</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>650</minThreshold>
+									<maxThreshold>800</maxThreshold>
+								</rotaryState>
+								<rotaryState name="CAB FWD">
+									<arduinoMessage>125</arduinoMessage>
+									<proSimMessage>R_AIR_TEMP_SELECTOR_CAB_FWD</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>500</minThreshold>
+									<maxThreshold>650</maxThreshold>
+								</rotaryState>
+								<rotaryState name="CAB AFT">
+									<arduinoMessage>126</arduinoMessage>
+									<proSimMessage>R_AIR_TEMP_SELECTOR_CAB_AFT</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>400</minThreshold>
+									<maxThreshold>500</maxThreshold>
+								</rotaryState>
+								<rotaryState name="R">
+									<arduinoMessage>127</arduinoMessage>
+									<proSimMessage>R_AIR_TEMP_SELECTOR_R</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>200</minThreshold>
+									<maxThreshold>400</maxThreshold>
+								</rotaryState>
+								<rotaryState name="L">
+									<arduinoMessage>128</arduinoMessage>
+									<proSimMessage>R_AIR_TEMP_SELECTOR_L</proSimMessage>
+									<rotaryPin/>
+									<minThreshold>100</minThreshold>
+									<maxThreshold>200</maxThreshold>
+								</rotaryState>
+							</rotaryStates>
+						</rotary>
+					</rotaryEncoders>
+				</panel>
+				<panel name="16">
+					<indicators>
+						<indicator name="Dual bleed">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR13</auxShiftRegisterName>
+							<auxShiftRegisterPin>2</auxShiftRegisterPin>
+							<shiftRegisterValue>42</shiftRegisterValue>
+							<transistorNumber>43</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>129</arduinoMessage>
+									<proSimMessage>I_DUAL_BLEED=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>130</arduinoMessage>
+									<proSimMessage>I_DUAL_BLEED=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Ram door full open L">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR13</auxShiftRegisterName>
+							<auxShiftRegisterPin>3</auxShiftRegisterPin>
+							<shiftRegisterValue>43</shiftRegisterValue>
+							<transistorNumber>44</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>131</arduinoMessage>
+									<proSimMessage>I_RAM_DOOR_FULL_OPEN_L=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>132</arduinoMessage>
+									<proSimMessage>I_RAM_DOOR_FULL_OPEN_L=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Ram door full open R">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR13</auxShiftRegisterName>
+							<auxShiftRegisterPin>4</auxShiftRegisterPin>
+							<shiftRegisterValue>44</shiftRegisterValue>
+							<transistorNumber>45</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>133</arduinoMessage>
+									<proSimMessage>I_RAM_DOOR_FULL_OPEN_R=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>134</arduinoMessage>
+									<proSimMessage>I_RAM_DOOR_FULL_OPEN_R=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Pack L">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR13</auxShiftRegisterName>
+							<auxShiftRegisterPin>5</auxShiftRegisterPin>
+							<shiftRegisterValue>45</shiftRegisterValue>
+							<transistorNumber>46</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>135</arduinoMessage>
+									<proSimMessage>I_PACK_L=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>136</arduinoMessage>
+									<proSimMessage>I_PACK_L=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Wing-body overheat 1">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR13</auxShiftRegisterName>
+							<auxShiftRegisterPin>6</auxShiftRegisterPin>
+							<shiftRegisterValue>46</shiftRegisterValue>
+							<transistorNumber>47</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>137</arduinoMessage>
+									<proSimMessage>I_WING-BODY_OVERHEAT_1=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>138</arduinoMessage>
+									<proSimMessage>I_WING-BODY_OVERHEAT_1=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Bleed trip off 1">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR13</auxShiftRegisterName>
+							<auxShiftRegisterPin>7</auxShiftRegisterPin>
+							<shiftRegisterValue>47</shiftRegisterValue>
+							<transistorNumber>48</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>139</arduinoMessage>
+									<proSimMessage>I_BLEED_TRIP_OFF_1=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>140</arduinoMessage>
+									<proSimMessage>I_BLEED_TRIP_OFF_1=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Pack R">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR14</auxShiftRegisterName>
+							<auxShiftRegisterPin>0</auxShiftRegisterPin>
+							<shiftRegisterValue>48</shiftRegisterValue>
+							<transistorNumber>49</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>141</arduinoMessage>
+									<proSimMessage>I_PACK_R=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>142</arduinoMessage>
+									<proSimMessage>I_PACK_R=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Wing-body overheat 2">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR14</auxShiftRegisterName>
+							<auxShiftRegisterPin>1</auxShiftRegisterPin>
+							<shiftRegisterValue>49</shiftRegisterValue>
+							<transistorNumber>50</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>143</arduinoMessage>
+									<proSimMessage>I_WING-BODY_OVERHEAT_2=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>144</arduinoMessage>
+									<proSimMessage>I_WING-BODY_OVERHEAT_2=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Bleed trip off 2">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR14</auxShiftRegisterName>
+							<auxShiftRegisterPin>2</auxShiftRegisterPin>
+							<shiftRegisterValue>50</shiftRegisterValue>
+							<transistorNumber>51</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>145</arduinoMessage>
+									<proSimMessage>I_BLEED_TRIP_OFF_2=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>146</arduinoMessage>
+									<proSimMessage>I_BLEED_TRIP_OFF_2=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Pressurization auto fail">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR14</auxShiftRegisterName>
+							<auxShiftRegisterPin>3</auxShiftRegisterPin>
+							<shiftRegisterValue>51</shiftRegisterValue>
+							<transistorNumber>52</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>147</arduinoMessage>
+									<proSimMessage>I_PRESSURIZATION_AUTO_FAIL=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>148</arduinoMessage>
+									<proSimMessage>I_PRESSURIZATION_AUTO_FAIL=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Off sched descent">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR14</auxShiftRegisterName>
+							<auxShiftRegisterPin>4</auxShiftRegisterPin>
+							<shiftRegisterValue>52</shiftRegisterValue>
+							<transistorNumber>53</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>149</arduinoMessage>
+									<proSimMessage>I_OFF_SCHED_DESCENT=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>150</arduinoMessage>
+									<proSimMessage>I_OFF_SCHED_DESCENT=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Pressurization altn">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR14</auxShiftRegisterName>
+							<auxShiftRegisterPin>5</auxShiftRegisterPin>
+							<shiftRegisterValue>53</shiftRegisterValue>
+							<transistorNumber>54</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>151</arduinoMessage>
+									<proSimMessage>I_PRESSURIZATION_ALTN=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>152</arduinoMessage>
+									<proSimMessage>I_PRESSURIZATION_ALTN=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+						<indicator name="Pressurization manual">
+							<mainShiftRegisterName>SR3</mainShiftRegisterName>
+							<auxShiftRegisterName>ASR14</auxShiftRegisterName>
+							<auxShiftRegisterPin>6</auxShiftRegisterPin>
+							<shiftRegisterValue>54</shiftRegisterValue>
+							<transistorNumber>55</transistorNumber>
+							<indicatorStates>
+								<indicatorState name="Off">
+									<arduinoMessage>153</arduinoMessage>
+									<proSimMessage>I_PRESSURIZATION_MANUAL=0</proSimMessage>
+								</indicatorState>
+								<indicatorState name="On">
+									<arduinoMessage>154</arduinoMessage>
+									<proSimMessage>I_PRESSURIZATION_MANUAL=1</proSimMessage>
+								</indicatorState>
+							</indicatorStates>
+						</indicator>
+					</indicators>
+					<switches>
+						<switch name="Recirc Fan L">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>155</arduinoMessage>
+									<proSimMessage>S_RECIRC_FAN_L_OFF</proSimMessage>
+									<inputPin>35</inputPin>
+								</switchState>
+								<switchState name="Auto">
+									<arduinoMessage>156</arduinoMessage>
+									<proSimMessage>S_RECIRC_FAN_L_AUTO</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Recirc Fan R">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>157</arduinoMessage>
+									<proSimMessage>S_RECIRC_FAN_R_OFF</proSimMessage>
+									<inputPin>36</inputPin>
+								</switchState>
+								<switchState name="Auto">
+									<arduinoMessage>158</arduinoMessage>
+									<proSimMessage>S_RECIRC_FAN_R_AUTO</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="OVHT test">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>159</arduinoMessage>
+									<proSimMessage>S_OVHT_TEST_OFF</proSimMessage>
+									<inputPin>37</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>160</arduinoMessage>
+									<proSimMessage>S_OVHT_TEST_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Pack 1">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>161</arduinoMessage>
+									<proSimMessage>S_PACK_1_OFF</proSimMessage>
+									<inputPin>38</inputPin>
+								</switchState>
+								<switchState name="High">
+									<arduinoMessage>162</arduinoMessage>
+									<proSimMessage>S_PACK_1_HIGH</proSimMessage>
+									<inputPin>39</inputPin>
+								</switchState>
+								<switchState name="Auto">
+									<arduinoMessage>163</arduinoMessage>
+									<proSimMessage>S_PACK_1_AUTO</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Pack 2">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>164</arduinoMessage>
+									<proSimMessage>S_PACK_2_OFF</proSimMessage>
+									<inputPin>40</inputPin>
+								</switchState>
+								<switchState name="High">
+									<arduinoMessage>165</arduinoMessage>
+									<proSimMessage>S_PACK_2_HIGH</proSimMessage>
+									<inputPin>41</inputPin>
+								</switchState>
+								<switchState name="Auto">
+									<arduinoMessage>166</arduinoMessage>
+									<proSimMessage>S_PACK_2_AUTO</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Pneumatic Isolation switch">
+							<switchStates>
+								<switchState name="Close">
+									<arduinoMessage>167</arduinoMessage>
+									<proSimMessage>S_PNEUMATIC_ISOLATION_SWITCH_CLOSE</proSimMessage>
+									<inputPin>42</inputPin>
+								</switchState>
+								<switchState name="Open">
+									<arduinoMessage>168</arduinoMessage>
+									<proSimMessage>S_PNEUMATIC_ISOLATION_SWITCH_OPEN</proSimMessage>
+									<inputPin>43</inputPin>
+								</switchState>
+								<switchState name="Auto">
+									<arduinoMessage>169</arduinoMessage>
+									<proSimMessage>S_PNEUMATIC_ISOLATION_SWITCH_AUTO</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Trip reset">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>170</arduinoMessage>
+									<proSimMessage>S_TRIP_RESET_OFF</proSimMessage>
+									<inputPin>44</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>171</arduinoMessage>
+									<proSimMessage>S_TRIP_RESET_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Bleed 1">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>172</arduinoMessage>
+									<proSimMessage>S_BLEED_1_OFF</proSimMessage>
+									<inputPin>45</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>173</arduinoMessage>
+									<proSimMessage>S_BLEED_1_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Bleed APU">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>174</arduinoMessage>
+									<proSimMessage>S_BLEED_APU_OFF</proSimMessage>
+									<inputPin>46</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>175</arduinoMessage>
+									<proSimMessage>S_BLEED_APU_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+						<switch name="Bleed 2">
+							<switchStates>
+								<switchState name="Off">
+									<arduinoMessage>176</arduinoMessage>
+									<proSimMessage>S_BLEED_2_OFF</proSimMessage>
+									<inputPin>47</inputPin>
+								</switchState>
+								<switchState name="On">
+									<arduinoMessage>177</arduinoMessage>
+									<proSimMessage>S_BLEED_2_ON</proSimMessage>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+				</panel>
+				<panel name="17">
+					<switches>
+						<switch name="Outflow valve">
+							<switchStates>
+								<switchState name="Open">
+									<arduinoMessage>178</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>48</inputPin>
+								</switchState>
+								<switchState name="Close">
+									<arduinoMessage>179</arduinoMessage>
+									<proSimMessage/>
+									<inputPin>49</inputPin>
+								</switchState>
+								<switchState name="Off">
+									<arduinoMessage>180</arduinoMessage>
+									<proSimMessage/>
+									<inputPin/>
+								</switchState>
+							</switchStates>
+						</switch>
+					</switches>
+					<rotaryEncoders>
+						<rotary name="Pressurization">
+							<inputPin>A1</inputPin>
+							<rotaryStates>
+								<rotaryState name="Auto">
+									<arduinoMessage>181</arduinoMessage>
+									<proSimMessage/>
+									<rotaryPin/>
+									<minThreshold>900</minThreshold>
+									<maxThreshold>1024</maxThreshold>
+								</rotaryState>
+								<rotaryState name="Altn">
+									<arduinoMessage>182</arduinoMessage>
+									<proSimMessage/>
+									<rotaryPin/>
+									<minThreshold>800</minThreshold>
+									<maxThreshold>900</maxThreshold>
+								</rotaryState>
+								<rotaryState name="Man">
+									<arduinoMessage>183</arduinoMessage>
+									<proSimMessage/>
+									<rotaryPin/>
+									<minThreshold>650</minThreshold>
+									<maxThreshold>800</maxThreshold>
+								</rotaryState>
+							</rotaryStates>
+						</rotary>
+					</rotaryEncoders>
+				</panel>
+			</panels>
+		</arduino>
+	</arduinos>
+</configurationType>
