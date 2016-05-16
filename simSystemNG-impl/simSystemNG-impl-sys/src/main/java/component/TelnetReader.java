@@ -1,6 +1,6 @@
 package component;
 
-import Entity.Message;
+import entity.ProsimMessage;
 import starter.Starter;
 
 import java.io.BufferedReader;
@@ -25,7 +25,7 @@ public class TelnetReader extends Telnet implements Runnable{
             try {
                 String readData = ins.readLine();
                 if(readData != null) {
-                    Message MessageFromTelnet = new Message();
+                    ProsimMessage MessageFromTelnet = new ProsimMessage();
 
                     /*if(readData.contains("=")){
                         readData = readData.replace("=0", "_OFF");

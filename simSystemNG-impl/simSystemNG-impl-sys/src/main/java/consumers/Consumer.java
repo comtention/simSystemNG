@@ -1,6 +1,6 @@
 package consumers;
 
-import Entity.Message;
+import entity.GenericMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,11 +10,11 @@ public abstract class Consumer implements Runnable {
     protected String name = this.getClass().getName();
     protected boolean isActive = false;
     protected int frequency = 100;
-    protected LinkedBlockingQueue<Message> queueToConsume;
+    protected LinkedBlockingQueue<GenericMessage> queueToConsume;
 
     Logger logger = LoggerFactory.getLogger(Consumer.class);
 
-    public Consumer(int frequency, LinkedBlockingQueue<Message> queueToConsume) {
+    public Consumer(int frequency, LinkedBlockingQueue<GenericMessage> queueToConsume) {
         this.frequency = frequency;
         this.queueToConsume = queueToConsume;
     }

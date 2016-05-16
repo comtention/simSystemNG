@@ -1,27 +1,39 @@
 package consumers;
 
-import Entity.Message;
+import component.Arduino;
+import entity.ArduinoMessage;
+import entity.GenericMessage;
+import entity.ProsimMessage;
+import message.MessageMapper;
+import starter.Starter;
 
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class FromArduinosQueueConsumer extends Consumer{
+public class FromArduinosQueueConsumer extends Consumer {
 
-    public FromArduinosQueueConsumer(int frequency, LinkedBlockingQueue<Message> queueToConsume) {
+    public FromArduinosQueueConsumer(int frequency, LinkedBlockingQueue<GenericMessage> queueToConsume) {
         super(frequency, queueToConsume);
     }
 
     public void run() {
-        try {
-            Message messageToConsume = queueToConsume.take();
-            //TODO analyse message to know to which arduino we must send it
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        while (isActive) {
+            try {
+                ArduinoMessage messageToConsume = (ArduinoMessage) queueToConsume.take();
+                String prosimMessage = MessageMapper.arduinoProsimMap.get(messageToConsume.getContent());
 
-        try {
-            Thread.sleep(frequency);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+                if(prosimMessage == null){
+                    logger.error("No corresponding prosim message for the arduino mesage: {}", prosimMessage);
+                }
+
+                ProsimMessage messageToSent = new ProsimMessage();
+                messageToSent.setContent(prosimMessage);
+                Starter.telnetSender.send(messageToSent);
+
+                Thread.sleep(frequency);
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

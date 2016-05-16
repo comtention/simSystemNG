@@ -1,19 +1,10 @@
-package Entity;
+package entity;
 
 /**
  * Abstract class for telnet and serial message
  */
-public class Message {
+public class ProsimMessage extends GenericMessage {
     private String content;
-    private String source;
-
-    public String getSource() {
-        return source;
-    }
-
-    public void setSource(String source) {
-        this.source = source;
-    }
 
     public String getContent() {
         return content;

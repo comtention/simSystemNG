@@ -1,6 +1,6 @@
 package component;
 
-import Entity.Message;
+import entity.ProsimMessage;
 
 public class TelnetSender extends Telnet{
 
@@ -12,8 +12,7 @@ public class TelnetSender extends Telnet{
         super(ip, port, name);
     }
 
-    //TODO test
-    public void send(Message message){
+    public void send(ProsimMessage message){
         outChannel.println(message.toString());
         outChannel.flush();
     }

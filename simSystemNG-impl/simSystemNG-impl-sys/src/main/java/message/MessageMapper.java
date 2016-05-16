@@ -1,5 +1,7 @@
 package message;
 
+import exception.ArduinoIdentifierNotFoundInMessageException;
+import exception.MessageContentNotFoundInMessageException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import starter.Starter;
@@ -9,14 +11,16 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
 import java.util.HashMap;
 import java.util.Map;
 
 public class MessageMapper {
     //This map contains <ARDUINO_NUMBER><ARDUINO_MESSAGE_SEPARATOR><ARDUINO_MESSAGE> -> <PROSIM_MSG>
-    private static Map<String, String> arduinoProsimMap = new HashMap<String, String>();
+    public  static Map<String, String> arduinoProsimMap = new HashMap<String, String>();
     //This map contains <PROSIM_MSG> -> <ARDUINO_NUMBER><ARDUINO_MESSAGE_SEPARATOR><ARDUINO_MESSAGE>
-    private static Map<String, String> prosimArduinoMap = new HashMap<String, String>();
+    public  static Map<String, String> prosimArduinoMap = new HashMap<String, String>();
     public static final String ARDUINO_MESSAGE_SEPARATOR = "##";
 
     private static Logger logger = LoggerFactory.getLogger(MessageMapper.class);
@@ -25,9 +29,11 @@ public class MessageMapper {
         logger.debug("Start fillArduinoProsimMap()");
         ConfigurationType config = null;
         try {
-            JAXBContext jc = JAXBContext.newInstance("entity");
+            JAXBContext jc = JAXBContext.newInstance("types");
             Unmarshaller unmarshaller = jc.createUnmarshaller();
-            config = (ConfigurationType) ((JAXBElement) unmarshaller.unmarshal(Starter.configurationXMLFile)).getValue();
+            Source source = new StreamSource(Starter.configurationXMLFile);
+            JAXBElement<ConfigurationType> root = unmarshaller.unmarshal(source, ConfigurationType.class);
+            config = root.getValue();
         } catch (JAXBException e) {
             e.printStackTrace();
         }
@@ -97,5 +103,23 @@ public class MessageMapper {
         logger.info("ProsimArduinoMap just filled with {} messages.", prosimArduinoMap.size());
         logger.debug("ProsimArduinoMap elements :{}", prosimArduinoMap.toString());
         logger.debug("Stop fillProsimArduinoMap()");
+    }
+
+    public static int getArduinoIdentifier(String message) throws ArduinoIdentifierNotFoundInMessageException {
+        String[] splitTab = message.split(ARDUINO_MESSAGE_SEPARATOR);
+        if (splitTab.length == 2){
+            return Integer.decode(splitTab[0]);
+        }else{
+            throw new ArduinoIdentifierNotFoundInMessageException();
+        }
+    }
+
+    public static String getArduinoMessageContent(String message) throws MessageContentNotFoundInMessageException {
+        String[] splitTab = message.split(ARDUINO_MESSAGE_SEPARATOR);
+        if (splitTab.length == 2){
+            return splitTab[1];
+        }else{
+            throw new MessageContentNotFoundInMessageException();
+        }
     }
 }

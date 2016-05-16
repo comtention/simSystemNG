@@ -30,11 +30,11 @@ import javax.xml.bind.annotation.*;
  * 
  * 
  */
+@XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "configurationType", propOrder = {
     "arduinos"
 })
-@XmlRootElement
 public class ConfigurationType {
 
     @XmlElement(required = true)

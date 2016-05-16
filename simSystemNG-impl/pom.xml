@@ -14,7 +14,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>simSystemNG-impl-mock</module>
         <module>simSystemNG-impl-sys</module>
     </modules>
 </project>
